@@ -1,2 +1,20 @@
-# Docu-sense
- A tool where an employee can drag-and-drop a PDF (e.g., a project brief, a financial report) and then ask questions about it. The AI finds the answers from the document.  This focuses on the "internal automations" and "utilities that make teams faster" part of the description.
+# DocuSense — AI-Powered Document Q&A
+
+Upload a PDF → ask a question → get grounded answers with citations.
+
+## Tech
+- Frontend: Next.js (App Router, TS)
+- Backend: FastAPI (Python)
+- Vector Store: Chroma (local dev)
+- AI: OpenAI (embeddings + LLM)
+
+## Monorepo
+- `apps/frontend` — web UI
+- `apps/backend` — API
+
+## Local Dev
+Backend:
+```bash
+cd apps/backend
+source .venv/bin/activate
+uvicorn main:app --reload --port 8000
